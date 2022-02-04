@@ -1,1 +1,65 @@
+<div class="search-container">
+    <br>
+    <form action="/artist-search" method="GET" id="form">
+        <input type="text" name="artist" placeholder="Artist's Name"/>
+        <br>
+        <button type="submit" class="btn">Search for an Artist</button>
+    </form>
+    
+</div>
 
+<style>
+
+h1 {
+    justify-content: center;
+    align-items: center;
+}
+html {
+    background-image: url("/images/spotify-background.jpg");
+    background-size: cover;
+}
+
+.search-container {
+    background-color: rgba(255,255,255, 0.5);
+    height: 175px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 250px;
+    margin-left: 300px;
+}
+
+#form {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#form input {
+    width: 400px;
+    margin: 20px 60px 8px 60px;
+    height: 20px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid rgb(179, 179, 179);
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+#form button {
+    border-style: none;
+    width: 175px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #3bb273;
+    padding: 8px 12px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+</style>

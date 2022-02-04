@@ -1,11 +1,19 @@
-{{#each tracks}}
-<figure>
-    <figcaption>Listen to the {{this.name}}:</figcaption>
-    <audio
-        controls
-        src="{{this.preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</figure>
-{{/each}}
+<div class="album-background">
+    <div style="height: 100vh;">
+        <div class="container">
+            <h1>Track Previews</h1>
+                <div class="row">
+                    {{#each tracks}}
+                        <div class="col-sm">
+                        <figure>
+                            <figcaption>{{this.name}}:</figcaption>
+                            <audio controls src="{{this.preview_url}}">
+                            Your browser does not support the <code>audio</code> element.
+                            </audio>
+                        </figure>
+                        </div>
+                    {{/each}}
+                </div>
+        </div>
+    </div>
+</div>

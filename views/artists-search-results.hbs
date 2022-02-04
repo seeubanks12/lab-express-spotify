@@ -1,7 +1,64 @@
-{{#each artists}}
-    <h1>{{this.name}}</h1>
-    
-    <img src="{{this.images.1.url}}" alt="">
-    <br>
-    <a href="/albums/{{this.id}}">View Albums</a>
-{{/each}}
+<div class="background">
+    <div class="containter">
+        <h1>Artists</h1>
+        <div class="row align-items-center justify-content-center">
+            {{#each artists}}
+            <div class="col-sm-3">
+                <div class="card">
+                    <img class="card-img-top"src="{{this.images.0.url}}" alt=""/>
+                    <div class="card-body">
+                        <p>{{this.name}}</p>
+                    </div>
+                        <div class="card-footer" style="margin-top: 4px;">
+                            <small>
+                                <a href="/albums/{{this.id}}"> View Albums </a>
+                            </small>
+                        </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+{{!-- <style>
+.container {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.container h1 {
+    color: #222222;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 300;
+}
+
+.card img {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+}
+
+.card {
+    margin: 20px;
+    height: 400px !important;
+}
+
+{{!-- .card a {
+    text-decoration: none; 
+    text-align: center; 
+    color:rgb(34, 125, 243);
+} --}}
+
+.background {
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+.album-background {
+    background-image: url({{albums.images.0.url}});
+}
+</style> --}}
